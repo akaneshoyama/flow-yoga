@@ -1,0 +1,728 @@
+@charset "UTF-8";
+
+
+:root {
+  --main-bg-color: #F8F4F0;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #333;
+  font-family: 'M PLUS Rounded 1c', 'Quicksand', 'Sans serif';
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+li {
+  list-style: none;
+}
+
+
+.wrapper {
+  width: 980px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.section-title .title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.section-title .title::after {
+  content: "";
+  width: 100px;
+  height: 3px;
+  background-color: #333;
+  position: absolute;
+  bottom: -15px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.section-title .text {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 80px;
+}
+
+.sp {
+  display: none;
+}
+
+
+
+
+/* ---------------------------------------
+ヘッダー
+--------------------------------------- */
+#header {
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header .logo {
+  width: 100%;
+  max-width: 150px;
+}
+
+#header .logo a {
+  display: block;
+}
+
+#header .navi .menu {
+  display: flex;
+  align-items: center;
+}
+
+#header .navi .menu li {
+  font-size: 14px;
+  margin-left: 40px;
+}
+
+
+
+/* ---------------------------------------
+メインビジュアル
+--------------------------------------- */
+.mainvisual {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('img/mainvisual.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mainvisual .text {
+  position: absolute;
+  top: 20%;
+  left: 8%;
+}
+
+.mainvisual .text .catchphrase {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.mainvisual .text .catchphrase span {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.mainvisual .text .description {
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+
+
+
+/* ---------------------------------------
+Service
+--------------------------------------- */
+.service .service-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 70px;
+}
+
+.service .service-item .item {
+  width: 40%;
+}
+
+.service .service-item .item:last-child {
+  margin-right: 0;
+}
+
+.service .service-item .item .img {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.service .service-item .item .img img {
+  width: 100%;
+  max-width: 240px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: solid 1px #d3d3d3;
+  border-radius: 50%;
+}
+
+.service .service-item .item .title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.service .btn {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.service .btn a {
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+  background-color: #333;
+  padding: 10px 30px;
+  border-radius: 7px;
+  transition: all 0.4s;
+  position: relative;
+}
+
+.service .btn a::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 17px;
+  right: 17px;
+}
+
+
+
+
+/* ---------------------------------------
+Price
+--------------------------------------- */
+.price {
+  background-color: var(--main-bg-color);
+}
+
+.price-inner {
+  padding: 100px 0;
+}
+
+.plan-table {
+  overflow-x: auto;
+  padding: 0 20px;
+}
+
+.plan-table .table {
+  width: 900px;
+  margin: 0 auto;
+  table-layout: fixed;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.plan-table .table th,
+.plan-table .table td {
+  border: solid 1px #707070;
+  padding: 20px;
+}
+
+.plan-table .table thead th:nth-child(n+2) {
+  background-color: #fafafa;
+  width: 200px;
+  font-weight: 500;
+}
+
+.plan-table .table thead th:first-child {
+  background-color: var(--main-bg-color);
+  width: 300px;
+  border-top: none;
+  border-left: none;
+  border-top: solid 1px var(--main-bg-color);
+  border-left: solid 1px var(--main-bg-color);
+}
+
+.plan-table .table tbody th {
+  background-color: #fafafa;
+  font-weight: 500;
+  text-align: left;
+}
+
+.plan-table .table tbody td {
+  font-size: 18px;
+  text-align: center;
+}
+
+.plan-table .table tbody td .table-title {
+  font-size: 14px;
+  display: block;
+}
+
+.plan-table .table tbody td .price {
+  background-color: #fff;
+  font-size: 22px;
+}
+
+.plan-table .table tbody td .tax {
+  font-size: 12px;
+}
+
+
+
+/* ---------------------------------------
+Contact
+--------------------------------------- */
+.contact .btn {
+  text-align: center;
+}
+
+.contact .btn a {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  background-color: #333;
+  padding: 15px 50px;
+  border-radius: 8px;
+  transition: all 0.4s;
+}
+
+
+
+/* ---------------------------------------
+フッター
+--------------------------------------- */
+#footer {
+  border-top: solid 1px #333;
+  background-color: var(--main-bg-color);
+  padding: 15px 20px 20px;
+}
+
+#footer .footer-inner {
+  width: 980px;
+  max-width: 100%;
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer .footer-inner .menu {
+  display: flex;
+  align-items: center;
+}
+
+#footer .footer-inner .menu li {
+  font-size: 14px;
+  margin-left: 40px;
+  position: relative;
+}
+
+#footer .footer-inner .menu li::after {
+  content: "";
+  width: 1px;
+  height: 16px;
+  background-color: #333;
+  transform: rotate(30deg);
+  position: absolute;
+  top: 3px;
+  right: -20px;
+}
+
+#footer .footer-inner .menu li:last-child::after {
+  content: none;
+}
+
+#footer .footer-inner .logo img {
+  width: 150px;
+  height: 80px;
+  object-fit: cover;
+}
+
+#footer .copyright {
+  font-size: 12px;
+  text-align: center;
+}
+
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+
+  .wrapper {
+    padding: 90px 60px;
+  }
+
+  .section-title .title {
+    font-size: 30px;
+  }
+
+  .section-title .title::after {
+    width: 90px;
+  }
+
+  .section-title .text {
+    margin-bottom: 70px;
+  }
+
+
+
+
+  /* ---------------------------------------
+  メインビジュアル(タブレット)
+  --------------------------------------- */
+  .mainvisual .text {
+    top: 15%;
+    left: 8%;
+  }
+
+  .mainvisual .text .catchphrase {
+    font-size: 45px;
+  }
+
+
+  /* ---------------------------------------
+  Service(タブレット)
+  --------------------------------------- */
+  .service .service-item {
+    gap: 30px;
+  }
+
+  .service .service-item .item {
+    width: 46%;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .service .service-item .item .img img {
+    max-width: 200px;
+  }
+
+  .service .btn {
+    margin-top: 30px;
+  }
+
+
+  /* ---------------------------------------
+  Price(タブレット)
+  --------------------------------------- */
+  .price-inner {
+    padding: 90px 0;
+  }
+
+  .plan-table .table {
+    width: 800px;
+  }
+
+  .plan-table .table thead th:first-child {
+    width: 200px;
+  }
+
+  .plan-table .table thead th:nth-child(n+2) {
+    width: 200px;
+  }
+
+
+  /* ---------------------------------------
+  フッター(タブレット)
+  --------------------------------------- */
+  #footer {
+    padding: 10px 20px;
+  }
+
+  #footer .footer-inner .logo img {
+    width: 140px;
+    height: 80px;
+    object-fit: cover;
+  }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+
+
+  main {
+    padding-top: 60px;
+  }
+
+  .sp {
+    display: inline;
+  }
+
+  .wrapper {
+    padding: 70px 60px;
+  }
+
+  .section-title .title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .section-title .title::after  {
+    width: 80px;
+  }
+
+  .section-title .text {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+
+
+
+
+  /* ---------------------------------------
+  ヘッダー(SP)
+  --------------------------------------- */
+  #header {
+    height: 60px;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  #header .logo {
+    max-width: 120px;
+  }
+
+  #header .hamburger {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    z-index: 30;
+  }
+
+  #header .hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    position: absolute;
+    left: 10px;
+    transition: all 0.5s;
+  }
+
+  #header .hamburger span:nth-of-type(1) {
+    top: 13px;
+  }
+
+  #header .hamburger span:nth-of-type(2) {
+    top: 24px;
+  }
+
+  #header .hamburger span:nth-of-type(3) {
+    top: 35px;
+  }
+
+  #header .navi {
+    width: 80%;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -80%;
+    z-index: 20;
+    transition: 0.6s;
+  }
+
+  #header .navi .menu {
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    padding: 60px 0;
+  }
+
+  #header .navi .menu li {
+    margin-left: 0;
+    padding: 10px 0;
+  }
+
+
+  #header .navi.active {
+    right: 0;
+  }
+
+  #header .hamburger.active span:nth-of-type(1) {
+    top: 25px;
+    transform: rotate(45deg);
+  }
+
+  #header .hamburger.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  #header .hamburger.active span:nth-of-type(3) {
+    top: 25px;
+    transform: rotate(-45deg);
+  }
+
+
+
+  /* ---------------------------------------
+  メインビジュアル(SP)
+  --------------------------------------- */
+  .mainvisual {
+    flex-direction: column;
+  }
+
+  .mainvisual .text {
+    top: 8%;
+  }
+
+  .mainvisual .text .catchphrase {
+    font-size: 38px;
+    margin-bottom: 0;
+    line-height: 1.4;
+  }
+
+  .mainvisual .text .description {
+    line-height: 2;
+  }
+
+
+  /* ---------------------------------------
+  Service(SP)
+  --------------------------------------- */
+  .service .service-item {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .service .service-item .item {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .service .service-item .item .img {
+    margin-bottom: 20px;
+  }
+
+  .service .service-item .item .img img {
+    width: 200px;
+  }
+
+  .service .btn {
+    margin-top: 20px;
+  }
+
+
+
+  /* ---------------------------------------
+  Price(SP)
+  --------------------------------------- */
+  .price-inner {
+    padding: 70px 0;
+  }
+
+  .price-inner .section-title {
+    padding: 0 60px;
+  }
+
+  .plan-table .table {
+    width: 600px;
+  }
+
+  .plan-table .table th,
+  .plan-table .table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .plan-table .table thead th:nth-child(n+2) {
+    width: 150px;
+  }
+
+  .plan-table .table thead th:first-child {
+    width: 150px;
+  }
+
+  .plan-table .table tbody td {
+    font-size: 14px;
+  }
+
+  .plan-table .table tbody td .price {
+    font-size: 18px;
+  }
+
+
+  /* ---------------------------------------
+  Contact(SP)
+  --------------------------------------- */
+  .contact .btn a {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+
+
+  /* ---------------------------------------
+  フッター(SP)
+  --------------------------------------- */
+  #footer .footer-inner {
+    flex-direction: column;
+  }
+
+  #footer .footer-inner .logo img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+  }
+
+  #footer .footer-inner .menu {
+    margin-bottom: 20px;
+  }
+
+  #footer .footer-inner .menu li {
+    margin-left: 30px;
+  }
+
+  #footer .footer-inner .menu li:first-child {
+    margin-left: 0;
+  }
+
+  #footer .footer-inner .menu li::after {
+    right: -15px;
+  }
+
+
+}
